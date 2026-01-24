@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Illustration Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="index.html" style="text-decoration: none; color: inherit;">Illustration Portfolio</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header" style="padding: 8rem 0 4rem; background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f59e0b 100%); color: white; text-align: center;">
+        <div class="container">
+            <h1 class="section-title" style="color: white; margin-bottom: 1rem;">Gallery</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Browse through my collection of illustrations, character designs, and digital art</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section style="padding: 2rem 0; background: var(--bg-secondary);">
+        <div class="container">
+            <div class="gallery-filters" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="character">Character Design</button>
+                <button class="filter-btn" data-filter="book">Book Illustration</button>
+                <button class="filter-btn" data-filter="concept">Concept Art</button>
+                <button class="filter-btn" data-filter="digital">Digital Art</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+                
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-category="character digital">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #a855f7, #ec4899); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Character Design 1
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Fantasy Warrior</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Digital character design for fantasy game</p>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="book traditional">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #f59e0b, #ec4899); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Book Illustration 1
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Children's Story Scene</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Watercolor illustration for children's book</p>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="concept digital">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #10b981, #a855f7); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Concept Art 1
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Mystical Forest</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Environmental concept art for game world</p>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-category="character digital">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #ec4899, #f59e0b); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Character Design 2
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Magical Creature</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Original fantasy creature design</p>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" data-category="book digital">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #6366f1, #ec4899); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Book Illustration 2
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Storybook Character</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Digital illustration for storybook</p>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-category="concept traditional">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #f59e0b, #10b981); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Concept Art 2
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Ancient Ruins</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Ink and watercolor environment study</p>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item" data-category="character digital">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #a855f7, #10b981); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Character Design 3
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Steampunk Inventor</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Detailed character design with backstory</p>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item" data-category="book traditional">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #ec4899, #6366f1); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Book Illustration 3
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Whimsical Adventure</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Mixed media illustration for children's book</p>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item" data-category="concept digital">
+                    <div class="gallery-image" style="width: 100%; height: 300px; background: linear-gradient(135deg, #10b981, #f59e0b); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Concept Art 3
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Floating Islands</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Fantasy landscape concept art</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Gallery image hover effect
+        const galleryImages = document.querySelectorAll('.gallery-image');
+        galleryImages.forEach(image => {
+            image.addEventListener('mouseenter', () => {
+                image.style.transform = 'scale(1.05)';
+            });
+            image.addEventListener('mouseleave', () => {
+                image.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+    <style>
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .gallery-item {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            box-shadow: var(--shadow-lg);
+        }
+    </style>
+</body>
+</html>
