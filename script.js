@@ -54,25 +54,22 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission handler
+// Form submission handler - Formspree will handle the submission
+// You can add custom success/error handling here if needed
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        // Formspree handles submission, but we can add a loading state
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
         
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // Simple validation
-        if (name && email && message) {
-            // In a real application, you would send this data to a server
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            contactForm.reset();
-        } else {
-            alert('Please fill in all fields.');
-        }
+        // Reset button after a delay (Formspree will redirect on success)
+        setTimeout(() => {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }, 3000);
     });
 }
 
